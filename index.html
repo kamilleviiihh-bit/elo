@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.L.O - Pequenos Negócios</title>
+    
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: { 50:'#FFFBF0', 100:'#FFE8B3', 150:'#FFF0D0', 200:'#FFD966', 300:'#FFC93D', 400:'#FFB81D', 500:'#FF9F1C', 600:'#E67E0F', 700:'#CC6200' },
+                        navy: { 50:'#E8EDF5', 100:'#C5D0E6', 150:'#B8C4D8', 200:'#8FA3CC', 250:'#7A92C0', 300:'#5A76B3', 350:'#4A66A8', 400:'#2E4A8A', 450:'#2A3E7A', 500:'#1A3366', 600:'#0F1F40', 700:'#0A1429' }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="h-full">
+    <div id="app" class="w-full h-full overflow-auto" style="background-color:#F8FAFF;">
+        <nav id="navbar" class="sticky top-0 z-50 backdrop-blur-md border-b" style="background:rgba(248,250,255,0.92); border-color:#C5D0E6;">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+                <div class="flex items-center gap-2 anim-slide">
+                    <div class="w-10 h-10 rounded-xl flex items-center justify-center font-heading font-800 text-lg bg-gradient-to-br from-[#FFC800] to-[#FFD426] text-[#1A3366]">
+                        E.L.O
+                    </div>
+                    <span class="font-heading font-700 text-xl hidden sm:block text-[#1A3366]">E.L.O</span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#vitrine" class="nav-link text-sm font-500 text-[#2E4A8A]">Vitrine</a>
+                    <a href="#aulas" class="nav-link text-sm font-500 text-[#2E4A8A]">Aulas</a>
+                    <a href="#planos" class="nav-link text-sm font-500 text-[#2E4A8A]">Planos</a>
+                    <a href="#contato" class="nav-link text-sm font-500 text-[#2E4A8A]">Contato</a>
+                </div>
+                <button id="mobile-btn" class="md:hidden p-2 rounded-lg text-[#1A3366]">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
+                <a href="#vitrine" class="block py-2 text-sm font-500 text-[#2E4A8A]">Vitrine</a>
+                <a href="#aulas" class="block py-2 text-sm font-500 text-[#2E4A8A]">Aulas</a>
+                <a href="#planos" class="block py-2 text-sm font-500 text-[#2E4A8A]">Planos</a>
+                <a href="#contato" class="block py-2 text-sm font-500 text-[#2E4A8A]">Contato</a>
+            </div>
+        </nav>
+
+        <section class="hero-pattern relative overflow-hidden py-16 sm:py-24 lg:py-32 px-4">
+            <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+                <div class="flex-1 text-center lg:text-left">
+                    <div class="anim-fade inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-600 mb-6 bg-[#FFE8B3] text-[#CC6200]">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Plataforma de Divulgação Local
+                    </div>
+                    <h1 id="hero-title" class="font-heading font-800 text-3xl sm:text-4xl lg:text-5xl leading-tight mb-5 anim-fade-d1 text-[#0F1F40]">
+                        Transforme seu Negócio<br><span class="text-[#FF9F1C]">com E.L.O</span>
+                    </h1>
+                    <p id="hero-subtitle" class="text-base sm:text-lg mb-8 max-w-xl mx-auto lg:mx-0 anim-fade-d2 text-[#5A76B3]">
+                        Aulas de marketing, palestras inspiradoras, vitrine premium e planos para crescer. Tudo que você precisa para expandir!
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start anim-fade-d3">
+                        <a href="#vitrine" id="cta-btn" class="btn-glow inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-600 text-sm transition-all hover:scale-105 bg-gradient-to-br from-[#FF9F1C] to-[#FFB81D] text-[#0F1F40]">
+                            <i data-lucide="search" class="w-4.5 h-4.5"></i> Explorar Negócios
+                        </a>
+                        <a href="#sobre" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-600 text-sm border-2 transition-all hover:scale-105 border-[#2E4A8A] text-[#2E4A8A]">
+                            Saiba Mais
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex-1 relative anim-fade-d3">
+                    <div class="relative w-full max-w-md mx-auto">
+                        <div class="absolute -top-4 -left-4 w-20 h-20 rounded-2xl float-icon bg-gradient-to-br from-[#FF9F1C] to-[#FFD966]"></div>
+                        <div class="absolute -bottom-4 -right-4 w-16 h-16 rounded-2xl float-icon bg-gradient-to-br from-[#2E4A8A] to-[#5A76B3]" style="animation-delay:1s;"></div>
+                        <div class="relative rounded-3xl p-8 shadow-xl bg-white border-2 border-[#E8EDF5]">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-[#FFE8B3]">🏪</div>
+                                <div>
+                                    <div class="font-heading font-700 text-sm text-[#0F1F40]">Negócios em Destaque</div>
+                                    <div class="text-xs text-[#8FA3CC]">Atualizados semanalmente</div>
+                                </div>
+                            </div>
+                            <div class="space-y-3" id="hero-mini-list">
+                                <div class="flex items-center gap-3 p-3 rounded-xl bg-[#F8FAFF]">
+                                    <div class="text-xl">🍰</div>
+                                    <div class="flex-1">
+                                        <div class="text-xs font-600 text-[#1A3366]">Doces da Vovó</div>
+                                        <div class="text-xs text-[#8FA3CC]">Confeitaria</div>
+                                    </div>
+                                    <div class="text-[#FF9F1C]">★★★★★</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="categorias" class="py-16 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-heading font-800 text-2xl sm:text-3xl mb-3 text-[#0F1F40]">Explore por Categoria</h2>
+                    <p class="text-sm text-[#5A76B3]">Encontre exatamente o que precisa perto de você</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4" id="cat-grid"></div>
+            </div>
+        </section>
+
+        <section id="vitrine" class="py-16 px-4 bg-gradient-to-b from-[#E8EDF5] to-[#F8FAFF]">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-10 gap-4">
+                    <div>
+                        <h2 class="font-heading font-800 text-2xl sm:text-3xl text-[#0F1F40]">Vitrine de Negócios</h2>
+                        <p class="text-sm mt-1 text-[#5A76B3]">Conheça quem faz acontecer na sua cidade</p>
+                    </div>
+                    <div class="flex gap-2 flex-wrap" id="filter-btns"></div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="biz-grid"></div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-16 px-4 bg-[#FFFBF0]">
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="font-heading font-800 text-2xl sm:text-3xl mb-3 text-[#0F1F40]">Divulgue seu Negócio</h2>
+                <p class="text-sm mb-8 text-[#5A76B3]">Cadastre-se e apareça na nossa vitrine gratuitamente</p>
+                <form id="contact-form" class="space-y-4 text-left">
+                    <input id="biz-name" type="text" placeholder="Nome do Negócio" class="w-full px-4 py-3 rounded-xl text-sm border-2 border-[#C5D0E6] focus:border-[#FFC800] outline-none">
+                    <select id="biz-cat" class="w-full px-4 py-3 rounded-xl text-sm border-2 border-[#C5D0E6] focus:border-[#FFC800] outline-none">
+                        <option value="">Selecione a Categoria...</option>
+                        <option>Alimentação</option>
+                        <option>Beleza</option>
+                        <option>Tecnologia</option>
+                    </select>
+                    <textarea id="biz-desc" rows="3" placeholder="Descrição..." class="w-full px-4 py-3 rounded-xl text-sm border-2 border-[#C5D0E6] focus:border-[#FFC800] outline-none resize-none"></textarea>
+                    <button type="submit" class="w-full py-3.5 rounded-xl font-600 text-sm bg-gradient-to-r from-[#FFC800] to-[#FFD426] text-[#0F1F40] hover:scale-[1.02] transition-transform">
+                        Enviar Cadastro
+                    </button>
+                    <div id="form-msg" class="hidden text-center text-sm font-600 py-3 rounded-xl"></div>
+                </form>
+            </div>
+        </section>
+
+        <footer class="py-10 px-4 bg-[#0A1429] text-center sm:text-left">
+            <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+                <span class="font-heading font-600 text-sm text-[#8FA3CC]">© 2026 E.L.O — Todos os direitos reservados</span>
+                <div class="flex gap-4">
+                    <i data-lucide="instagram" class="text-[#8FA3CC] cursor-pointer hover:text-white"></i>
+                    <i data-lucide="facebook" class="text-[#8FA3CC] cursor-pointer hover:text-white"></i>
+                    <i data-lucide="mail" class="text-[#8FA3CC] cursor-pointer hover:text-white"></i>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
